@@ -8,7 +8,7 @@ app.controller("myCtrl", function($scope){
 app.config(function ($routeProvider, $locationProvider) { 
         $locationProvider.hashPrefix(''); 
         $routeProvider
-            .when("/home", {
+            .when("/", {
                 templateUrl: "template/home.html"
             })
             .when("/about", {
