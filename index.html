@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SPA</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-route.min.js"></script>
+    <script src="app/route.js"></script>
+    
+  </head>
+
+  <body ng-app="myApp" ng-controller="myCtrl">
+
+    
+
+    
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">VIGNESH V</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#/home">HOME <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#/about">ABOUT US</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#/contact">CONTACT US</a>
+      </li>
+      </ul>
+    
+  </div>
+</nav>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-3 align-items-center justify-content-center" style="background-color:red;height:100vh;">
+          <h1 class="text-center mt-5">login</h1>
+          <form>
+            <div class="form-group">
+            <label for="nme">Name:</label>
+            <input type="text" class="form-control" id="nme" ng-model="name">
+          </div>
+          <div class="form-group">
+            <label for="emailid">Email address:</label>
+            <input type="email" class="form-control" id="emailid" ng-model="email">
+          </div>
+          <button type="submit" class="btn btn-primary" ng-click="myClick()">CHECK</button>
+          <button type="reset" class="btn btn-primary">reset</button>
+          </form>
+           <div ng-show="myShow">
+             <h5>Your Name:- {{name}} </h5>
+
+          <h5>Your Email:- {{email}} </h5>
+           </div>
+          
+        </div>
+
+
+
+
+        <div class="col-lg-9 d-flex align-items-center justify-content-center" style="background-color:green;height:100vh;">
+            <div class="text-center" ng-view> </div>
+        </div>
+      </div>
+      
+    </div>
+
+  </body>
+</html>
